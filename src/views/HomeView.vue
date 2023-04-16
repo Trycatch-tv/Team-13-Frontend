@@ -12,7 +12,7 @@ const tables = ref([1, 2, 3, 4, 5, 6, 7, 8, 9]);
       <SideMenu />
     </div>
     <div class="flex justify-center items-center w-full">
-      <div class="grid grid-cols-3 gap-32">
+      <div class="grid grid-cols-3 gap-28">
         <TableButton v-for="table in tables" :key="table" :number="table" />
       </div>
     </div>
