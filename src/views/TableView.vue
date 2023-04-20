@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import DescriptionButton from '@/components/DescriptionButton.vue'
+import DescriptionInfo from '@/components/DescriptionInfo.vue'
 </script>
 <template>
   <div class="flex flex-col justify-evenly items-center h-screen">
@@ -8,10 +8,10 @@ import DescriptionButton from '@/components/DescriptionButton.vue'
     </div>
     <div>
       <div class="grid grid-cols-2 gap-20">
-        <DescriptionButton label="Capacidad"/>
-        <DescriptionButton label="Estado"/>
-        <DescriptionButton label="Ubicacion"/>
-        <DescriptionButton label="Fecha y hora reserva"/>
+        <DescriptionInfo label="Capacidad"/>
+        <DescriptionInfo label="Estado"/>
+        <DescriptionInfo label="Ubicacion"/>
+        <DescriptionInfo label="Fecha y hora reserva"/>
       </div>
     </div>
   </div>
