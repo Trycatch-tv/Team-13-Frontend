@@ -5,7 +5,7 @@
     </div>
     <div class="flex items-center justify-center flex-col">
       <MenuButton text="Registrar/Editar mesas" route="register" />
-      <MenuButton text="Listado de mesas" route="about" />
+      <MenuButton text="Listado de mesas" route="list" />
       <MenuButton text="Crear/Cancelar reserva" />
     </div>
   </div>
