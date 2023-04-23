@@ -1,14 +1,12 @@
 <script setup lang="ts">
+import TitlePage from '@/components/TitlePage.vue';
 import { ref } from 'vue';
 
 const tables = ref([1, 2, 3, 4, 5, 6, 7, 8, 9])
 </script>
 <template>
   <div class="h-screen flex flex-col justify-around items-center">
-    <div class="flex justify-center items-center bg-red-400 h-14 w-80 rounded-xl border-black border-2">
-      Listado de mesas
-    </div>
-
+    <TitlePage text="Listado de mesas"/>
     <div class="relative overflow-x-auto">
       <table class="w-full text-sm text-left text-gray-500">
         <thead class="text-xs text-gray-700 bg-gray-50 border-2 border-black">
