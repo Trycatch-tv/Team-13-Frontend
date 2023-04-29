@@ -37,3 +37,5 @@ onMounted(() => {
     </div>
   </div>
 </template>
+<!--https://reservation-p19o.onrender.com/api/reservations/  -->
+<!-- https://reservation-p19o.onrender.com/api/tables/ -->
