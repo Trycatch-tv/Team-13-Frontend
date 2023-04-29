@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps({
-  label: String,
+  label: String||Number,
   content: {
     default: "---------------"
   }
