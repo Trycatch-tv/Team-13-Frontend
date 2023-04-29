@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import TitlePage from '@/components/TitlePage.vue';
-import SideMenu from '@/components/SideMenu.vue';
 
 import { ref, onMounted } from 'vue';
 import axios from 'axios'; //Peticion hacia la api
@@ -10,10 +9,10 @@ import axios from 'axios'; //Peticion hacia la api
 
 const mesas = ref([]) // referencia de un arreglo vacio (reactividad)
 
-async function getMesas() { //Coonstruimos la funcion getMesas
+async function getMesas() { //Construimos la funcion getMesas
   await axios.get('https://reservation-p19o.onrender.com/api/tables') // Traemos la info de l API
     .then(function (response) {
-      mesas.value = response.data.data // Guardamo la info en la variable mesas
+      mesas.value = response.data.data // Guardamos la info en la variable mesas
     }
     )
 }
