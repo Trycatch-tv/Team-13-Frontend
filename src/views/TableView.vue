@@ -4,6 +4,7 @@ import TitlePage from '@/components/TitlePage.vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute()
+
 </script>
 <template>
   <div class="flex flex-col justify-evenly items-center h-screen">
@@ -18,3 +19,5 @@ const route = useRoute()
     </div>
   </div>
 </template>
+<!--https://reservation-p19o.onrender.com/api/reservations/  -->
+<!-- https://reservation-p19o.onrender.com/api/tables/ -->
