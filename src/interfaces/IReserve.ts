@@ -1,9 +1,9 @@
 export interface IReserve {
-  id: string,
-  status: number,
-  customer_id: string,
-  number_people: number,
-  table_id: string,
-  createdAt: string,
-  updatedAt: string
+  id?: String,
+  status: Number,
+  customer_id?: String,
+  number_people: Number,
+  table_id: String,
+  createdAt?: String,
+  updatedAt?: String
 }

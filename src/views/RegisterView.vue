@@ -28,7 +28,11 @@ const tableNumber = ref();
 const capacity = ref();
 const location = ref();
 const edit = ref();
-const table = ref({});
+const table: Ref<ITable> = ref({
+  number_table: tableNumber.value,
+  capacity: capacity.value,
+  location: location.value,
+});
 const router = useRouter();
 const store = useTableStore();
 
@@ -60,6 +64,7 @@ function createTable() {
 }
 
 function editTable() {
+  store.editTable(table.value)
   router.push("/")
 }
 </script>

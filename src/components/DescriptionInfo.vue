@@ -2,6 +2,7 @@
 defineProps({
   label: String||Number,
   content: {
+    type: String||Number,
     default: "---------------"
   }
 })

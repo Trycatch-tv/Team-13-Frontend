@@ -4,24 +4,24 @@ import TitlePage from '@/components/TitlePage.vue';
 import { useRoute } from 'vue-router';
 import { useTableStore } from '@/stores/tables';
 import { onMounted, ref, watchEffect, type Ref } from 'vue';
-import type ITable from '@/interfaces/ITable';
+import type { ITable } from '@/interfaces/ITable';
 import type { IReserve } from '@/interfaces/IReserve';
 import { useReserveStore } from '@/stores/reserves';
 
 const store = useTableStore();
 const reserveStore = useReserveStore();
-const table: Ref<ITable> = ref('');
-const reserve: Ref<IReserve> = ref('');
+const table: Ref<ITable> = ref({});
+const reserve: Ref<IReserve> = ref({});
 const route = useRoute();
 
 watchEffect(() => {
   table.value = store.findTable;
-  reserveStore.findReserveForTable(table.value.id)
   reserve.value = reserveStore.findReserve;
 })
 
 onMounted(() => {
   store.findByNumber(route.params.id);
+  reserveStore.findReserveForTable(route.params.id);
 })
 </script>
 <template>

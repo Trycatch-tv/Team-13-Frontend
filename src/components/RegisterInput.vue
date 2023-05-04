@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useTableStore } from '@/stores/tables'
 import { ref, watch } from 'vue'
 
 const data = ref('')
