@@ -64,6 +64,7 @@ function createTable() {
 }
 
 function editTable() {
+  store.editTable(table.value)
   router.push("/")
 }
 </script>

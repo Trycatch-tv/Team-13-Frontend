@@ -21,7 +21,7 @@ export const useTableStore = defineStore('table', () => {
     tables.value = response.data;
   }
 
-  async function findByNumber(number: string|string[]) {
+  async function findByNumber(number: string|string[]|Number) {
     const uri = `${baseUrl}/tables?number=${number}`;
     const rawResponse = await fetch(uri, {
       method: 'GET',
@@ -52,5 +52,24 @@ export const useTableStore = defineStore('table', () => {
     console.log(response)
   }
 
-  return { getTables, tables, findTable, createTable, findByNumber }
+  async function editTable(table: ITable) {
+    await findByNumber(table.number_table)
+    const uri = `${baseUrl}/table/${findTable.value.id}`
+    const rawResponse = await fetch(uri, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'Application/json',
+        'Accept': 'Application/json'
+      },
+      body: JSON.stringify({
+        number_table: table.number_table,
+        capacity: table.capacity,
+        location: table.location
+      })
+    })
+    const response = await rawResponse.json();
+    console.log(response);
+  }
+
+  return { getTables, tables, findTable, createTable, findByNumber, editTable }
 })
